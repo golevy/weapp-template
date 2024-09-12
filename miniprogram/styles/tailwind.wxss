@@ -3900,7 +3900,7 @@ video {
   flex-grow: 1;
 }
 
-.flex-shrink-0 {
+.shrink-0 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
