@@ -37,7 +37,7 @@
     "minifyWXSS": true
   },
   "appid": "wx842457758b21f09a",
-  "projectname": "travel-weapp",
+  "projectname": "weapp-template",
   "libVersion": "2.20.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
