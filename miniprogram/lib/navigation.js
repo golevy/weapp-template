@@ -9,22 +9,14 @@ const Pages = {
     authRequired: false,
     url: '/pages/onboarding/index',
   },
-  UserProfile: {
-    authRequired: false,
-    url: '/pages/user/profile/index',
-  },
 };
-å
+
 export const navigateToIndexPage = () => {
   navigate(Pages.Index);
 };
 
 export function navigateToOnboarding() {
   navigate(Pages.OnBoarding);
-}
-
-export function navigateToUserProfile() {
-  navigate(Pages.UserProfile);
 }
 
 export const navigate = (page, urlParam = null) => {
