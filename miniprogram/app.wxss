@@ -8,11 +8,9 @@ page {
   justify-content: flex-start;
   --foreground: #aed3ff;
   --background: #2d71f5;
-  --light-foreground: #e9f0f9;
   --light-white: #f9f9f9;
   --muted: #a3a3a3;
   --muted-foreground: #d4d4d4;
-  --muted-border: #270e0e;
   --primary: #93a7ba;
 }
 
@@ -31,31 +29,16 @@ button::after {
   box-sizing: border-box;
 }
 
-.custom-placeholder {
-  color: var(--muted-foreground);
-  font-weight: 350;
-}
-
-/* Border */
 .border-muted {
   border-color: var(--muted);
-}
-
-.border-gray {
-  border-color: var(--muted-border);
 }
 
 .border-background {
   border-color: var(--background);
 }
 
-/* Background */
 .bg-foreground {
   background-color: var(--foreground);
-}
-
-.bg-lighter-foreground {
-  background-color: var(--light-foreground);
 }
 
 .bg-primary {
@@ -66,15 +49,10 @@ button::after {
   background-color: var(--background);
 }
 
-.bg-lighter-white {
-  background-color: var(--light-white);
-}
-
 .bg-muted {
   background-color: var(--muted);
 }
 
-/* Text */
 .text-background {
   color: var(--background);
 }
@@ -97,5 +75,18 @@ button::after {
 
 .separator {
   margin: 2px 0;
-  border-bottom: 1px solid var(--muted-border);
+  border-bottom: 1px solid var(--muted);
+}
+
+.custom-placeholder {
+  color: var(--muted-foreground);
+  font-weight: 350;
+}
+
+.truncate-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 450rpx;
 }
