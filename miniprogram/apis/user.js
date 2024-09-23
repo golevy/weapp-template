@@ -5,7 +5,7 @@ const COLLECTION_NAME = 'users';
 const db = wx.cloud.database().collection(COLLECTION_NAME);
 const app = getApp();
 
-export function checkLogin() {
+export function checkUserLogin() {
   return new Promise((resolve, reject) => {
     if (app.globalData.userInfo) {
       resolve(true);
