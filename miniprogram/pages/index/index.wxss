@@ -1,3 +1,57 @@
-page {
-  background-color: #ffffff;
+.tab-container {
+  display: flex;
+  padding-top: 20rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+
+.tab,
+.tab-highlight {
+  color: #240846;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: width 0.5s;
+  height: 70%;
+  padding: 16rpx 0rpx;
+}
+
+.tab {
+  background: white;
+}
+
+.tab-highlight {
+  background: #faf7fd;
+  border-radius: 200rpx;
+}
+
+.tab-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.tab-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.modal-main {
+  padding: 48rpx;
+  border-radius: 32rpx;
+  text-align: start;
+  background: white;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 18pt;
+  color: black;
+}
+
+.modal-content {
+  font-size: 10pt;
+  color: var(--textGrey);
 }

@@ -1,10 +1,5 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/tool/index",
-    "pages/user/index",
-    "pages/onboarding/index"
-  ],
+  "pages": ["pages/index/index", "pages/onboarding/index"],
   "window": {
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
@@ -14,27 +9,5 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "requiredPrivateInfos": ["chooseLocation"],
-  "lazyCodeLoading": "requiredComponents",
-  "tabBar": {
-    "color": "#a3a3a3",
-    "selectedColor": "#f6c63c",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/img_home.png",
-        "selectedIconPath": "images/img_home_active.png"
-      },
-      {
-        "pagePath": "pages/tool/index",
-        "iconPath": "images/img_tool.png",
-        "selectedIconPath": "images/img_tool_active.png"
-      },
-      {
-        "pagePath": "pages/user/index",
-        "iconPath": "images/img_user.png",
-        "selectedIconPath": "images/img_user_active.png"
-      }
-    ]
-  }
+  "lazyCodeLoading": "requiredComponents"
 }

@@ -1,5 +1,14 @@
 App({
-  onLaunch: function () {
+  globalData: {
+    userInfo: null,
+    windowWidth: null,
+    statusBarHeight: null,
+    navigationBarHeight: null,
+    toolbarHeight: null,
+    menu: null,
+  },
+
+  onLaunch() {
     if (!wx.cloud) {
       console.error(
         'Please use Base Library version 2.2.3 or above to utilize cloud capabilities.',
@@ -10,24 +19,19 @@ App({
       });
     }
 
-    wx.getSystemSetting({
-      success: (e) => {
-        this.windowWidth = e.windowWidth;
-        this.screenHeight = e.screenHeight;
-        this.windowHeight = e.windowHeight;
-        this.statusBarHeight = e.statusBarHeight;
+    const windowInfo = wx.getWindowInfo();
 
-        // Bottom navigation bar
-        this.navigationBarHeight = e.screenHeight - e.safeArea.bottom;
+    this.globalData.windowWidth = windowInfo.windowWidth;
+    this.globalData.statusBarHeight = windowInfo.statusBarHeight;
 
-        // Toolbar
-        let menu = wx.getMenuButtonBoundingClientRect();
-        this.menu = menu;
-        this.toolbarHeight = menu.height + (menu.top - e.statusBarHeight) * 2;
-      },
-    });
-  },
-  globalData: {
-    userInfo: null,
+    // Bottom navigation bar
+    this.globalData.navigationBarHeight =
+      windowInfo.screenHeight - windowInfo.safeArea.bottom;
+
+    // Toolbar
+    const menu = wx.getMenuButtonBoundingClientRect();
+    this.globalData.menu = menu;
+    this.globalData.toolbarHeight =
+      menu.height + (menu.top - windowInfo.statusBarHeight) * 2;
   },
 });
