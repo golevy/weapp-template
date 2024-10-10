@@ -29,7 +29,7 @@ App({
       windowInfo.screenHeight - windowInfo.safeArea.bottom;
 
     // Toolbar
-    let menu = wx.getMenuButtonBoundingClientRect();
+    const menu = wx.getMenuButtonBoundingClientRect();
     this.globalData.menu = menu;
     this.globalData.toolbarHeight =
       menu.height + (menu.top - windowInfo.statusBarHeight) * 2;
