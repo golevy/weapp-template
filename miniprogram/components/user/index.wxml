@@ -1,0 +1,3 @@
+<view class="h-screen flex items-center justify-center font-bold text-xl" hover-class="none" hover-stop-propagation="false">
+    User
+</view>
