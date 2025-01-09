@@ -1,12 +1,14 @@
-<view>
-  <home wx:if="{{currentTab == 'home'}}" />
-  <tool wx:if="{{currentTab == 'tool'}}" />
-  <user wx:if="{{currentTab == 'user'}}" />
-</view>
-<!-- Bottom tab -->
-<view class="cu-bar bg-white shadow foot tab-container" style="padding-bottom: {{ navigationBarHeight > 0 ? (navigationBarHeight + 8) : 20 }}rpx;">
-  <view bindtap="onTabSelect" class="{{ currentTab === item.id ? 'tab-highlight' : 'tab' }} flex" data-tabid="{{ item.id }}" style="width: {{ currentTab === item.id ? tabWidth * 1.5 : tabWidth }}px;" wx:for="{{ tabs }}" wx:key="id">
-    <image class="tab-icon" src="{{ currentTab === item.id ? item.iconActive : item.icon }}"></image>
-    <view wx:if="{{ currentTab === item.id }}" class="tab-text ml-3">{{ item.title }}</view>
+<view class="flex flex-col h-full">
+  <view class="flex-1 overflow-auto bg-white">
+    <home wx:if="{{currentTab == 'home'}}" />
+    <tool wx:if="{{currentTab == 'tool'}}" />
+    <user wx:if="{{currentTab == 'user'}}" />
+  </view>
+  <!-- Bottom tab -->
+  <view class="bg-white tab-container" style="padding-bottom: {{ navigationBarHeight > 0 ? (navigationBarHeight + 8) : 20 }}rpx;">
+    <view bind:tap="onTabSelect" class="{{ currentTab === item.id ? 'tab-highlight' : 'tab' }} flex" data-tabid="{{ item.id }}" style="width: {{ currentTab === item.id ? tabWidth * 1.5 : tabWidth }}px;" wx:for="{{ tabs }}" wx:key="id">
+      <image class="tab-icon" src="{{ currentTab === item.id ? item.iconActive : item.icon }}"></image>
+      <view wx:if="{{ currentTab === item.id }}" class="tab-text ml-3">{{ item.title }}</view>
+    </view>
   </view>
 </view>
